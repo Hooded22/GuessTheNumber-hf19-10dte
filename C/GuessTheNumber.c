@@ -6,7 +6,8 @@ int main()
 {
     srand(time(NULL));
 
-    int n = rand() % 100;
+    int n = (rand() % 100) + 1;
+    int s = 1;
 
     char w = 0;
 
@@ -19,14 +20,16 @@ int main()
         if (l > n)
         {
             printf("Za duzo!\n");
+            s++;
         }
         else if (l < n)
         {
             printf("Za malo!\n");
+            s++;
         }
         else
         {
-            printf("Wygrales!\n");
+            printf("Wygrales!\n Za " + s + " razem");
             w = 1;
         }
 
